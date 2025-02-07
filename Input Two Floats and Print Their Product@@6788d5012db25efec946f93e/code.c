@@ -4,6 +4,6 @@ int main (){
     float num1,num,product;
     scanf("%f %f,product");
     product = num1*num2;
-    printf("Product: %f,2f\n",product);
+    printf("Product: %f.2f\n",product);
     return 0;
 }
