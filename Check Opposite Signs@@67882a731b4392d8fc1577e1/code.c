@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdbool.h>
+int main(){
 
 bool haveOppositeSigns(int a, int b) {
     return ((a ^ b) < 0);
@@ -16,4 +16,5 @@ int main() {
     }
 
     return 0;
+}
 }
