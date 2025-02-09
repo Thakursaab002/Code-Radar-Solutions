@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    int a, b;
-    
-    scanf("%d %d", &a, &b);
+    int num, shift;
 
-    printf("%d\n", a ^ b);
+    scanf("%d %d", &num, &shift);
+
+    printf("%d\n", num << shift);
     
     return 0;
 }
