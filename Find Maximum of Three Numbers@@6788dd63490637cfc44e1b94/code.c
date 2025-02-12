@@ -2,7 +2,6 @@
 
 int main() {
     int a, b, c;
-    printf("Enter three space-separated integers: ");
     scanf("%d %d %d", &a, &b, &c);
 
     int max = a;
@@ -13,7 +12,7 @@ int main() {
         max = c;
     }
 
-    printf("The maximum number is: %d\n", max);
+    printf("max");
 
     return 0;
 }
