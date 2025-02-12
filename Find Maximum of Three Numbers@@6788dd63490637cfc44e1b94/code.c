@@ -11,6 +11,6 @@ int main() {
     if (c > max) {
         max = c;
     }
-    printf("%d\n",max)
+    printf("%d\n",max);
     return 0;
 }
