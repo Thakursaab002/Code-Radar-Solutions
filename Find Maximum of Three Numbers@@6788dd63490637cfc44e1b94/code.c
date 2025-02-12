@@ -12,7 +12,7 @@ int main() {
         max = c;
     }
 
-    printf("max");
+    printf(max);
 
     return 0;
 }
