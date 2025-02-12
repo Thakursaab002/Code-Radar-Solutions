@@ -12,7 +12,6 @@ int main() {
         max = c;
     }
 
-    printf(max);
 
     return 0;
 }
