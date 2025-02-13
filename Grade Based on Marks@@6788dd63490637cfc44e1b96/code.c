@@ -12,7 +12,7 @@ int main() {
     int marks;
     scanf("%d", &marks);
     
-    printf("Your grade is: %c\n", grade(marks));
+    printf("%c\n", grade(marks));
     
     return 0;
 }
