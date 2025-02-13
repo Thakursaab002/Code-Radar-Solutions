@@ -10,7 +10,6 @@ char grade(int marks) {
 
 int main() {
     int marks;
-    printf("Enter your marks: ");
     scanf("%d", &marks);
     
     printf("Your grade is: %c\n", grade(marks));
