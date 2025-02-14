@@ -1,0 +1,18 @@
+#include <stdio.h> 
+int main(){
+    int a;
+    scanf("%d", &a);
+    if (a%3){
+        printf("Divisible by 3");
+    }
+    else if(a%5){
+        printf("Divisible by 5");
+    }
+    else if(a%3 || a%5){
+        printf("Divisible by Both");
+    }
+    else{
+        printf("Non DIvisible");
+    }
+    return 0;
+}
