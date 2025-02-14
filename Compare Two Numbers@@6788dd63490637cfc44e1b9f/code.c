@@ -6,7 +6,10 @@ int main(){
         printf("Equal");
     }
     else if(a>b){
-        printf("First")
+        printf("First");
+    }
+    else if(a<b){
+        printf("Second");
     }
     else{
         printf("Zero");
