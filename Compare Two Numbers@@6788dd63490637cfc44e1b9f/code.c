@@ -8,9 +8,6 @@ int main(){
     else if(a>b){
         printf("First")
     }
-    else if(a<b){
-        printf("Second");
-    }
     else{
         printf("Zero");
     }
