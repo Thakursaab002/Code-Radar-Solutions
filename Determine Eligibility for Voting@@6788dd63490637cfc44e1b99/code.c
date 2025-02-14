@@ -2,8 +2,9 @@
 int main(){
     int a;
     scanf("%d, &a");
-    if (a>18 || a==18);
+    if (a>18 || a==18){
     printf("Eligible");
+    }
     else{
     printf("Not Eligible");
     }
