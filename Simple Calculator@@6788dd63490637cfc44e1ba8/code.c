@@ -5,12 +5,8 @@ int main() {
     char operator;
     float result;
 
-    // Read input from the user
-    printf("Enter first number: ");
     scanf("%d", &num1);
-    printf("Enter second number: ");
     scanf("%d", &num2);
-    printf("Enter operator (+, -, *, /): ");
     scanf(" %c", &operator);
 
     // Perform the operation
