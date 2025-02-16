@@ -8,8 +8,6 @@ int main() {
     scanf("%d", &num1);
     scanf("%d", &num2);
     scanf(" %c", &operator);
-
-    // Perform the operation
     switch (operator) {
         case '+':
             result = num1 + num2;
@@ -31,9 +29,7 @@ int main() {
         default:
             printf("Error: Invalid operator!\n");
             return 1;
-    }
 
-    // Output the result
     printf("Result: %.2f\n", result);
 
     return 0;
