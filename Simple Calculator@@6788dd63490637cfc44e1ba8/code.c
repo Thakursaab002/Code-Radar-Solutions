@@ -6,13 +6,13 @@ int main(){
          printf("%d + %d = %d", a, b, a + b);
     }
     else if(a==-){
-        printf("%d - %d", a, b, a   b);
+        printf("%d - %d = %d", a, b, a   b);
     }
     else if(a==*){
-        printf("%d * %d", a, b, a * b);
+        printf("%d * %d =%d", a, b, a * b);
     }
     else if(a==/){
-        printf("%d / %d", a, b, a / b);
+        printf("%d / %d = %d", a, b, a / b);
     }
     else {
         printf("Error");
