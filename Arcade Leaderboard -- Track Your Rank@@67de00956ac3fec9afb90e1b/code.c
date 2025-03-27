@@ -1,9 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-void trackPlayerRanks(int* ranked, int* player, int n, int m, int* result) {
-    int* uniqueRanks = (int*)malloc(n * sizeof(int));
-    int rank = 1, index = 0;
+void trackPlayerRanks(int ranked[], int player[], int n, int m, int result[]) {
+    int uniqueRanks[n], rank = 1, index = 0;
     uniqueRanks[0] = ranked[0];
 
     for (int i = 1; i < n; i++) {
@@ -20,27 +18,22 @@ void trackPlayerRanks(int* ranked, int* player, int n, int m, int* result) {
         result[j] = i + 2;
         j++;
     }
-
-    free(uniqueRanks);
 }
 
 int main() {
     int n, m;
     scanf("%d", &n);
-    int* ranked = (int*)malloc(n * sizeof(int));
+    int ranked[n];
     for (int i = 0; i < n; i++) scanf("%d", &ranked[i]);
 
     scanf("%d", &m);
-    int* player = (int*)malloc(m * sizeof(int));
+    int player[m];
     for (int i = 0; i < m; i++) scanf("%d", &player[i]);
 
-    int* result = (int*)malloc(m * sizeof(int));
+    int result[m];
     trackPlayerRanks(ranked, player, n, m, result);
 
     for (int i = 0; i < m; i++) printf("%d\n", result[i]);
 
-    free(ranked);
-    free(player);
-    free(result);
     return 0;
 }
