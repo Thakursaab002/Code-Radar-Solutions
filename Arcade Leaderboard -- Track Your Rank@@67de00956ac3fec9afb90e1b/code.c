@@ -1,49 +1,38 @@
 #include <stdio.h>
 
-// Function to remove duplicates from the leaderboard
-int removeDuplicates(int arr[], int n) {
-    int uniqueCount = 0;
-    for (int i = 0; i < n; i++) {
-        if (i == 0 || arr[i] != arr[i - 1]) {
-            arr[uniqueCount++] = arr[i];
-        }
-    }
-    return uniqueCount;
-}
-
-int findRank(int leaderboard[], int size, int score) {
-    int left = 0, right = size - 1, rank = size + 1;
-    
-    while (left <= right) {
-        int mid = left + (right - left) / 2;
-        if (leaderboard[mid] <= score) {
-            rank = mid + 1;
-            right = mid - 1;
-        } else {
-            left = mid + 1;
-        }
-    }
-    return rank;
-}
+void trackPlayerRanks(int ranked[], int player[], int n, int m, int result[]);
 
 int main() {
     int n, m;
-
     scanf("%d", &n);
-    int leaderboard[n];
-    for (int i = 0; i < n; i++) {
-        scanf("%d", &leaderboard[i]);
-    }
+    int ranked[200000];
+    for (int i = 0; i < n; i++) scanf("%d", &ranked[i]);
 
-    int uniqueSize = removeDuplicates(leaderboard, n);
     scanf("%d", &m);
-    int gameScores[m];
-    for (int i = 0; i < m; i++) {
-        scanf("%d", &gameScores[i]);
-    }
-    for (int i = 0; i < m; i++) {
-        printf("%d\n", findRank(leaderboard, uniqueSize, gameScores[i]));
-    }
+    int player[200000];
+    for (int i = 0; i < m; i++) scanf("%d", &player[i]);
+
+    int result[200000];
+    trackPlayerRanks(ranked, player, n, m, result);
+
+    for (int i = 0; i < m; i++) printf("%d\n", result[i]);
 
     return 0;
+}
+
+void trackPlayerRanks(int ranked[], int player[], int n, int m, int result[]) {
+    int denseRanks[200000], rank = 1;
+    denseRanks[0] = rank;
+
+    for (int i = 1; i < n; i++) {
+        if (ranked[i] != ranked[i - 1]) rank++;
+        denseRanks[i] = rank;
+    }
+
+    int i = n - 1, j = 0;
+    while (j < m) {
+        while (i >= 0 && player[j] >= ranked[i]) i--;
+        result[j] = i == -1 ? 1 : denseRanks[i] + 1;
+        j++;
+    }
 }
