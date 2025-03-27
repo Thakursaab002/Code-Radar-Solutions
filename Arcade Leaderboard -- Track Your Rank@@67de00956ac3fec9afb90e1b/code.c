@@ -1,6 +1,7 @@
 #include <stdio.h>
-
-void trackPlayerRanks(int ranked[], int player[], int n, int m, int result[]);
+void trackPlayerRanks(int ranked[], int player[], int n, int m, int result[]) {
+    int uniqueRanks[n], rank = 1, index = 0;
+    uniqueRanks[0] = ranked[0];
 
 int main() {
     int n, m;
@@ -20,9 +21,6 @@ int main() {
     return 0;
 }
 
-void trackPlayerRanks(int ranked[], int player[], int n, int m, int result[]) {
-    int uniqueRanks[n], rank = 1, index = 0;
-    uniqueRanks[0] = ranked[0];
 
     for (int i = 1; i < n; i++) {
         if (ranked[i] != ranked[i - 1]) {
