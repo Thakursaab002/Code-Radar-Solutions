@@ -15,7 +15,7 @@ void bubblesort(int arr[], int n) {
 void printarray(int arr[], int n){
     int m;
     for(int i =0;i<n;i++){
-        printf(" %d", arr[i]);
+        printf("%d", arr[i]);
     }
     printf("\n");
 }
@@ -23,7 +23,7 @@ int main(){
     int n;
     scanf("%d", &n);
     int arr[n];
-    for (int i=0;i<=n;i++){
+    for (int i=0;i<n;i++){
         scanf("%d", &arr[i]);
     }
     bubblesort(arr,n);
