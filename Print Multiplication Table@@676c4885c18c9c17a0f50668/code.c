@@ -1,10 +1,12 @@
 #include <stdio.h>
-int main(){
-    int n;
-    scanf("%d", &n);
-    if(i%n==0){
-    for(int i=1;i<=n;i++){
-        printf("2 * i = %d",i);
+
+int main() {
+    int N;
+    scanf("%d", &N);
+
+    for (int i = 1; i <= 10; i++) {
+        printf("%d x %d = %d\n", N, i, N * i);
     }
-    }
+
+    return 0;
 }
