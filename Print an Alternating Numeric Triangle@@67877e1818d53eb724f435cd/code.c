@@ -4,11 +4,10 @@ int main() {
     scanf("%d", &n);
     
     for (int i = 1; i <= n; i++) {
-        int bit = i % 2 == 0 ? 0 : 1; // Start with 1 for odd rows, 0 for even rows
-
+        int value = i % 2;  // Start with 1 for odd rows, 0 for even rows
         for (int j = 1; j <= i; j++) {
-            printf("%d ", bit);
-            bit = 1 - bit; // Toggle between 1 and 0
+            printf("%d ", value);
+            value = 1 - value;  // Toggle 0 <-> 1
         }
         printf("\n");
     }
