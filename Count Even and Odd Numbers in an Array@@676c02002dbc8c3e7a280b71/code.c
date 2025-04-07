@@ -12,6 +12,6 @@ int main(){
         else
             oddCount++;
     }
-    printf("%d %d", evenCount, oddCount);
+    printf("%d %d\n", evenCount, oddCount);
     return 0;
 }
