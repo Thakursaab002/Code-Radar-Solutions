@@ -6,9 +6,9 @@ int main(){
     int evenCount = 0, oddCount = 0;
     for(int i=0;i<=n;i++){
         scanf("%d", &arr[i]);
-        if(arr[i] % 2 ==0){
+        if(arr[i] % 2 ==0)
             evencount++;
-        }
+        
         else(
             oddCount++;
         )
