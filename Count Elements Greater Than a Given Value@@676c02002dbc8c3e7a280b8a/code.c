@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main()[
+int main(){
     int arr[100];
     int n;
     scanf("%d",&n);
@@ -15,4 +15,4 @@ int main()[
         }
     }
     printf("%d",count);
-]
+}
