@@ -1,21 +1,26 @@
 #include <stdio.h>
-int main(){
-    int arr[100];
-    int n;
-    int max=arr[0];
-    int secondmax=-1;
-    for(int i=0;i<=n;i++){
-        scanf("%d",&arr);
-        if(max<arr[i]){
-            max=arr[i];
-        }
-        
+#include <limits.h>
+
+int main() {
+    int arr[100], n;
+    scanf("%d", &n);
+    if (n < 2) {
+        printf("-1");
+        return 0;
     }
-    for(int i=0;i<=n;i++){
-        scanf("%d",&arr);
-        if(secondmax<arr[i] && arr[i]!=max){
-            secondmax=arr[i];
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    int max = INT_MIN, second_max = INT_MIN;
+    for(int i = 0; i < n; i++) {
+        if(arr[i] > max) {
+            second_max = max;
+            max = arr[i];
+        }
+        else if(arr[i] > second_max && arr[i] != max) {
+            second_max = arr[i];
         }
     }
-    printf("%d",secondmax);
+    printf(second_max == INT_MIN ? "-1" : "%d", second_max);
+    return 0;
 }
