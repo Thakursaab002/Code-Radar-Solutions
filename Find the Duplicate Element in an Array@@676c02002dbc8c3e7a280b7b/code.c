@@ -8,8 +8,10 @@ int main(){
     }
     int duplicate=0;
     for(int i=0;i<n;i++){
-        if(arr[0]=arr[i]){
+        for(int j=i+1;j<n;j++)
+        if(arr[i]=arr[j]){
             duplicate++;
+            break;
         }
     }
     printf("%d",duplicate);
