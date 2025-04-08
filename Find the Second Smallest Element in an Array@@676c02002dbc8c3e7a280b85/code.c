@@ -4,20 +4,18 @@ int main() {
     int arr[100], n;
     scanf("%d", &n);
     
-    // Read array elements
     for(int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
 
-    int smallest = arr[0], second_smallest = -1;
-    
-    // Find smallest and second smallest
+    int small = arr[0]
+    int second_smallest = -1;
     for(int i = 1; i < n; i++) {
-        if(arr[i] < smallest) {
-            second_smallest = smallest;
-            smallest = arr[i];
+        if(arr[i] < small) {
+            second_smallest = small;
+            small = arr[i];
         }
-        else if(arr[i] > smallest && (second_smallest == -1 || arr[i] < second_smallest)) {
+        else if(arr[i] > small && (second_smallest == -1 || arr[i] < second_smallest)) {
             second_smallest = arr[i];
         }
     }
