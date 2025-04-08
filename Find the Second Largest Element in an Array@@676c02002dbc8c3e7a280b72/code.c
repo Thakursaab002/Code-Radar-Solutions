@@ -15,27 +15,18 @@ int main() {
     }
 
     int max = arr[0];
-    int secondmax = arr[0];
-    int found = 0;
+    int secondmax = -1;
 
     for(int i = 1; i < n; i++) {
         if(arr[i] > max) {
+            secondmax = max;
             max = arr[i];
         }
-    }
-
-    for(int i = 0; i < n; i++) {
-        if(arr[i] != max) {
-            if(!found) {
-                secondmax = arr[i];
-                found = 1;
-            }
-            else if(arr[i] > secondmax) {
-                secondmax = arr[i];
-            }
+        else if(arr[i] < max && arr[i] > secondmax) {
+            secondmax = arr[i];
         }
     }
 
-    printf(found ? "%d" : "-1", secondmax);
+    printf(secondmax != -1 ? "%d" : "-1", secondmax);
     return 0;
 }
