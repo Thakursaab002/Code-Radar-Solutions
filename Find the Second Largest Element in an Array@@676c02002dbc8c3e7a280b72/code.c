@@ -13,7 +13,7 @@ int main(){
     }
     for(int i=0;i<=n;i++){
         scanf("%d",&arr);
-        if(secondmax<arr[i] && max!=arr[i]){
+        if(secondmax<arr[i] && arr[i]!=max){
             secondmax=arr[i];
         }
     }
