@@ -8,7 +8,7 @@ int main() {
     for(int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
-
+    int largest_even=-1;
      int found_even = 0; 
     
     for(int i = 0; i < n; i++) {
