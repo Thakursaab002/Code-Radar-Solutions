@@ -9,7 +9,7 @@ int main(){
 
     int largest_elment=-1;
     for(int i=0;i<n;i++){
-        if(arr[i]%2==0 && (largest_element == -1 || (arr[i] > largest_element))){
+        if(arr[i]%2==0 && (largest_element == -1 || arr[i] > largest_element)){
             largest_elment=arr[i];
         }
     }
