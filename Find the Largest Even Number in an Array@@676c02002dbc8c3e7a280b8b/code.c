@@ -12,6 +12,9 @@ int main(){
         if(arr[i]%2==0 && arr[i]>largest_elment){
             largest_elment=arr[i];
         }
+        else{
+            printf("-1");
+        }
     }
     printf("%d",largest_elment);
 }
