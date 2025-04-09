@@ -7,13 +7,10 @@ int main(){
         scanf("%d",&arr[i]);
     }
 
-    int largest_elment=0;
+    int largest_elment=-1;
     for(int i=0;i<n;i++){
         if(arr[i]%2==0 && arr[i]>largest_elment){
             largest_elment=arr[i];
-        }
-        else{
-            printf("-1");
         }
     }
     printf("%d",largest_elment);
