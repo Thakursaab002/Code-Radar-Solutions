@@ -9,13 +9,17 @@ int main() {
         scanf("%d", &arr[i]);
     }
 
-    int largest_even = -1;
+     int found_even = 0; 
+    
     for(int i = 0; i < n; i++) {
-        if(arr[i] % 2 == 0 && arr[i] > largest_even) {
-            largest_even = arr[i];
+        if(arr[i] % 2 == 0) {
+            found_even = 1;
+            if(arr[i] > largest_even) {
+                largest_even = arr[i];
+            }
         }
     }
 
-    printf("%d", largest_even);
+    printf("%d", found_even ? largest_even : -1);
     return 0;
 }
