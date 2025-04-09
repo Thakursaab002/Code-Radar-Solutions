@@ -13,6 +13,7 @@ int main() {
     for(int i = 0; i < n; i++) {
         if(arr[i] % 2 == 0 && arr[i] > largest_even) {
             largest_even = arr[i];
+            else{printf("-2")};
         }
     }
 
