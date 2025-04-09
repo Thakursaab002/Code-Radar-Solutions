@@ -9,9 +9,9 @@ int main(){
 
     int largest_elment=0;
     for(int i=0;i<n;i++){
-        if(arr[i]%2==0){
-            largest_elment++;
-            printf("%d",largest_elment);
+        if(arr[i]%2==0 && arr[i]>largest_elment){
+            largest_elment=arr[i];
         }
     }
+    printf("%d",largest_elment);
 }
