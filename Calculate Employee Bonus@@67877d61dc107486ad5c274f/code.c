@@ -12,11 +12,11 @@ int main(){
         scanf("%d %s %f",&bonus[i].x,&bonus[i].y,&bonus[i].bonus);
     }
     for(int i=0;i<s;i++){
-        if(bonus[s].bonus<50000){
-            bonus[s].bonus ==bonus[s].bonus * 0.1;
+        if(bonus[i].bonus<50000){
+            bonus[i].bonus = bonus[i].bonus * 0.1;
         }
         else{
-            bonus[s].bonus == bonus[s].bonus *0.05;
+            bonus[i].bonus = bonus[i].bonus *0.05;
         }
     }
     for(int i=0;i<s;i++){
