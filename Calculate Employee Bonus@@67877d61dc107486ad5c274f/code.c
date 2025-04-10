@@ -9,7 +9,7 @@ int main(){
     scanf("%d", &s);
     struct employyee bonus [s];
     for(int i=0;i<s;i++){
-        scanf("%d %s %f",&bonus[s].x,&bonus[s].y,&bonus[s].bonus);
+        scanf("%d %s %f",&bonus[i].x,&bonus[i].y,&bonus[i].bonus);
     }
     for(int i=0;i<s;i++){
         if(bonus[s].bonus<50000){
