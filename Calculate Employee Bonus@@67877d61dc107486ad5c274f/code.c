@@ -1,7 +1,7 @@
 #include <stdio.h>
 struct employyee{
     int x;
-    char y;
+    char y[50];
     float bonus;
 };
 int main(){
@@ -9,7 +9,7 @@ int main(){
     scanf("%d", &s);
     struct employyee bonus [s];
     for(int i=0;i<s;i++){
-        scanf("%d %c %f",&bonus[s].x,&bonus[s].y,&bonus[s].bonus);
+        scanf("%d %s %f",&bonus[s].x,&bonus[s].y,&bonus[s].bonus);
     }
     for(int i=0;i<s;i++){
         if(bonus[s].bonus<50000){
