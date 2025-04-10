@@ -20,9 +20,9 @@ int main(){
         }
     }
     for(int i=0;i<s;i++){
-        printf("Employee ID: %d, ",bonus[s].x);
-        printf("Name: %c, ", bonus[s].y);
-        printf("Bonus: %.2f\n",bonus[s].bonus);
+        printf("Employee ID: %d, ",bonus[i].x);
+        printf("Name: %c, ", bonus[i].y);
+        printf("Bonus: %.2f\n",bonus[i].bonus);
     }
     return 0;
 
