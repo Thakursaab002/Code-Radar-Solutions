@@ -1,4 +1,4 @@
-#include <stdio.>
+#include <stdio.h>
 int main(){
     int n;
     scanf("%d",&n);
@@ -7,6 +7,7 @@ int main(){
         scanf("%d",&arr[i]);
     }
     int target;
+    scanf("%d",&target);
     for(int i=0;i<n;i++){
         if(target=arr[i]){
             printf("%d",arr[i]);
